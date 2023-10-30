@@ -29,6 +29,6 @@ func Init() {
 	}
 }
 
-func createCon() *sql.DB {
+func CreateCon() *sql.DB {
 	return db
 }

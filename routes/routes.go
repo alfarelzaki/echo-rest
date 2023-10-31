@@ -17,11 +17,12 @@ func Init() *echo.Echo {
 	})
 
 	e.GET("/pegawai", controllers.FetchAllPegawai)
-
-	//create specific url for post function
 	e.POST("/pegawai", controllers.StorePegawai)
-
 	e.PUT("/pegawai", controllers.UpdatePegawai)
+	e.DELETE("/pegawai", controllers.DeletePegawai)
+
+	e.GET("/generate-hash/:password", controllers.GenerateHashPassword)
+	e.POST("/login", controllers.CheckLogin)
 
 	return e
 }
